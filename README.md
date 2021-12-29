@@ -12,5 +12,11 @@ Both have a dependency on a file named "GeoLite2-City.mmdb" in the root director
 
 ```
 docker build . -t iplocate
-docker run -p --rm -it 3000:3000 --name iplocate iplocate
+
+# Interactive (for testing)
+docker run --rm -it -p 3000:3000 --name iplocate iplocate
+
+
+# Daemon
+docker run --rm -d -p 3000:3000 --name iplocate iplocate
 ```
